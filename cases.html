@@ -5,178 +5,25 @@
   <title>533 코칭 사례</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- index.html의 CSS와 동일 -->
-  <style>
-    :root {
-      --bg: #f4f7fb;
-      --bg-soft: #ffffff;
-      --accent: #2563eb;
-      --accent-soft: rgba(37, 99, 235, 0.08);
-      --accent-alt: #f97316;
-      --text-main: #0f172a;
-      --text-sub: #6b7280;
-      --border-soft: #d4d7e5;
-      --radius-xl: 18px;
-      --radius-lg: 14px;
-      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.12);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Noto Sans KR",
-        system-ui, sans-serif;
-      background: linear-gradient(180deg, #f4f7fb 0%, #ffffff 100%);
-      color: var(--text-main);
-      line-height: 1.6;
-    }
-
-    .section {
-      padding: 48px 20px;
-    }
-
-    .section-inner {
-      width: 100%;
-      max-width: 1120px;
-      margin: 0 auto;
-    }
-
-    .section-title {
-      font-size: 28px;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      margin-bottom: 12px;
-      color: #020617;
-    }
-
-    .section-subtitle {
-      font-size: 14px;
-      color: var(--text-sub);
-      margin-bottom: 32px;
-      line-height: 1.7;
-    }
-
-    .grid-2col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-      align-items: center;
-      margin-bottom: 32px;
-    }
-
-    .grid-2col.reverse {
-      direction: rtl;
-    }
-
-    .grid-2col.reverse > * {
-      direction: ltr;
-    }
-
-    .image-block {
-      border-radius: var(--radius-xl);
-      background: #ffffff;
-      border: 1px solid var(--border-soft);
-      padding: 16px;
-      box-shadow: var(--shadow-soft);
-      overflow: hidden;
-    }
-
-    .image-placeholder {
-      width: 100%;
-      aspect-ratio: 4/3;
-      background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent);
-      font-size: 14px;
-      font-weight: 600;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .text-block h3 {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 12px;
-      color: #111827;
-    }
-
-    .text-block p {
-      font-size: 14px;
-      color: var(--text-sub);
-      margin-bottom: 12px;
-      line-height: 1.8;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(249, 115, 22, 0.1);
-      color: var(--accent-alt);
-      font-size: 11px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 20px;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      font-size: 13px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      white-space: nowrap;
-    }
-
-    .btn-accent {
-      background: linear-gradient(135deg, #f97316, #ea580c);
-      color: #ffffff;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
-    }
-
-    .btn-accent:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 24px rgba(249, 115, 22, 0.3);
-    }
-
-    @media (max-width: 900px) {
-      .grid-2col {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-
-      .section-title {
-        font-size: 24px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .section {
-        padding: 32px 16px;
-      }
-
-      .btn {
-        justify-content: center;
-        width: 100%;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
+  <header class="gnb">
+    <div class="gnb-inner">
+      <a class="gnb-logo" href="index.html">533 창업설계</a>
+      <nav class="gnb-nav">
+        <a href="index.html">홈</a>
+        <a href="cases.html">코칭 사례</a>
+        <a href="pricing.html">비용 & 조건</a>
+        <a href="index.html#guide">사전 안내서</a>
+        <a class="gnb-cta" href="apply.html">신청하기</a>
+      </nav>
+    </div>
+  </header>
   <section class="section section-light">
     <div class="section-inner">
-      <h1 class="section-title">📂 533 1:1 코칭 사례 모음</h1>
+      <h1 class="section-title"><i class="ri-folder-open-line"></i> 533 1:1 코칭 사례 모음</h1>
       <p class="section-subtitle">
         경제지 기사형 톤으로 정리한 실제 적용 사례들입니다.<br />
         “앱 없이도 선매출이 가능한가?”라는 질문이 어떻게 숫자로 이어지는지 보여줍니다.
@@ -188,7 +35,7 @@
         <h2 style="font-size: 22px; font-weight: 800; margin-bottom: 8px;">
           “앱 대신 엑셀로 시작한 홈짓몰, 1기 재구매율 100%를 만들다”
         </h2>
-        <p style="font-size: 13px; color: #6b7280; margin-bottom: 16px;">
+        <p style="font-size: 15px; color: #6b7280; margin-bottom: 16px;">
           세심한 홈짓몰 운영 서비스 &lt;아베방 가자&gt;의 선매출·재구매 설계 사례
         </p>
 
@@ -221,9 +68,10 @@
 
           <div class="image-block">
             <div class="image-placeholder">
-              📊 아베방 가자 운영 대시보드 (예시)<br />
+              <i class="ri-bar-chart-line"></i>
+              <span>아베방 가자 운영 대시보드 (예시)<br />
               · 고객 상태 / 결제 / 재구매 예정일 한 눈에<br />
-              · 앱 없이도 월 단위 매출·재구매 관리
+              · 앱 없이도 월 단위 매출·재구매 관리</span>
             </div>
           </div>
         </div>
@@ -237,7 +85,7 @@
         <h2 style="font-size: 22px; font-weight: 800; margin-bottom: 8px;">
           “원장 1인의 학원에서, 자동으로 돌아가는 영어 아카데미로”
         </h2>
-        <p style="font-size: 13px; color: #6b7280; margin-bottom: 16px;">
+        <p style="font-size: 15px; color: #6b7280; margin-bottom: 16px;">
           온라인 영어 교육 서비스의 커리큘럼·운영 자동화 사례
         </p>
 
@@ -270,9 +118,10 @@
 
           <div class="image-block">
             <div class="image-placeholder">
-              📚 영어 아카데미 표준 커리큘럼 (예시)<br />
+              <i class="ri-book-read-line"></i>
+              <span>영어 아카데미 표준 커리큘럼 (예시)<br />
               · 모듈/주차별 학습 목표<br />
-              · 강사용 스크립트 & 체크리스트
+              · 강사용 스크립트 & 체크리스트</span>
             </div>
           </div>
         </div>
@@ -286,10 +135,41 @@
           당신 사업의 숫자 구조가 궁금하시다면, 아래 무료 코칭에서 먼저 진단을 받아보세요.
         </p>
         <a href="apply.html" class="btn btn-accent">
-          🎓 내 사업도 1:1로 진단받기
+          <i class="ri-graduation-cap-line"></i> 내 사업도 1:1로 진단받기
         </a>
       </div>
     </div>
   </section>
+  <div class="sticky-bottom-cta">
+    <div class="sticky-inner">
+      <div class="sticky-text">
+        <span class="badge-mini">마감 임박</span>
+        <span class="text-main">혼자 고민하면 늦습니다. <strong>1:1 설계</strong>로 시작하세요.</span>
+      </div>
+      <a href="apply.html" class="btn btn-accent btn-sm">
+        <i class="ri-rocket-2-line"></i> 무료 코칭 신청하기
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const revealTargets = document.querySelectorAll('.section');
+    revealTargets.forEach((target) => target.classList.add('reveal'));
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    revealTargets.forEach((target) => observer.observe(target));
+  </script>
+
 </body>
 </html>
