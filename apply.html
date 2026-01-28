@@ -5,7 +5,6 @@
   <title>533 1:1 무료 코칭 신청</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
   <header class="gnb">
@@ -22,14 +21,14 @@
   </header>
   <section class="section section-light">
     <div class="section-inner section-inner-narrow">
-      <h1 class="section-title"><i class="ri-graduation-cap-line"></i> 533 스타트업 1:1 무료 코칭 신청</h1>
+      <h1 class="section-title">🎓 533 스타트업 1:1 무료 코칭 신청</h1>
       <p class="section-subtitle">
         본 코칭은 <strong>IT 플랫폼 기반 스타트업, 100억 가치 목표</strong>를 전제로 합니다.<br />
         “교육”이 아니라 “설계”를 원하는 분만 신청해주세요.
       </p>
 
       <div class="highlight-box">
-        <p style="font-size: 16px; margin-bottom: 4px;">
+        <p style="font-size: 13px; margin-bottom: 4px;">
           · 정부지원 컨설팅 목적이 아닌, <strong>실제 회사를 함께 설계</strong>하는 1:1 코칭입니다.<br />
           · 초기 자금 투자/마이너스 없이, 18개월 내 100억 가치 스타트업을 목표로 합니다.<br />
           · 한 달 10팀 내외만 선발하며, <strong>대표가 직접 코칭</strong>합니다.
@@ -70,7 +69,7 @@
           <label style="display:block; margin-top:8px;">
             기타:
             <input type="text" name="q2_status_other"
-              style="width:100%; padding:6px 8px; margin-top:4px; font-size:16px;" />
+              style="width:100%; padding:6px 8px; margin-top:4px; font-size:13px;" />
           </label>
         </div>
 
@@ -86,7 +85,7 @@
           <label style="display:block; margin-top:8px;">
             기타:
             <input type="text" name="q3_fund_other"
-              style="width:100%; padding:6px 8px; margin-top:4px; font-size:16px;" />
+              style="width:100%; padding:6px 8px; margin-top:4px; font-size:13px;" />
           </label>
         </div>
 
@@ -119,7 +118,7 @@
           <label style="display:block; margin-top:8px;">
             기타 설명:
             <textarea name="q5_ownerfit_desc" rows="3"
-              style="width:100%; padding:6px 8px; margin-top:4px; font-size:16px;"></textarea>
+              style="width:100%; padding:6px 8px; margin-top:4px; font-size:13px;"></textarea>
           </label>
         </div>
 
@@ -140,7 +139,7 @@
           <label style="display:block; margin-top:8px;">
             추가로 남기고 싶은 의견:
             <textarea name="q6_comment" rows="3"
-              style="width:100%; padding:6px 8px; margin-top:4px; font-size:16px;"></textarea>
+              style="width:100%; padding:6px 8px; margin-top:4px; font-size:13px;"></textarea>
           </label>
         </div>
 
@@ -148,7 +147,7 @@
         <div class="principle-card">
           <h4>7. 창업을 하려는 이유와 얻고 싶은 결과는 무엇인가요? *</h4>
           <textarea name="q7_reason" rows="4" required
-            style="width:100%; padding:8px 10px; font-size:16px;"
+            style="width:100%; padding:8px 10px; font-size:13px;"
             placeholder="왜 창업을 하시려는지, 어떤 삶/결과를 얻고 싶으신지 구체적으로 적어주세요."></textarea>
         </div>
 
@@ -156,16 +155,16 @@
         <div class="principle-card">
           <h4>8. 이름 / 연락처 / 이메일 / 신청 경로 *</h4>
           <textarea name="q8_contact" rows="3" required
-            style="width:100%; padding:8px 10px; font-size:16px;"
+            style="width:100%; padding:8px 10px; font-size:13px;"
             placeholder="예) 홍길동 / 010-0000-0000 / hello@example.com / 블로그 글 보고 신청"></textarea>
         </div>
 
         <!-- 제출 버튼 -->
         <div style="text-align: center; margin-top: 8px;">
           <button type="submit" class="btn btn-accent">
-            <i class="ri-graduation-cap-line"></i> 1:1 무료 코칭 신청서 제출
+            🎓 1:1 무료 코칭 신청서 제출
           </button>
-          <p style="font-size: 12px; color: #6b7280; margin-top: 8px;">
+          <p style="font-size: 11px; color: #6b7280; margin-top: 8px;">
             * 실제 접수 방식(이메일/백엔드 연동 등)은 개발 환경에 맞게
             <code>&lt;form&gt;</code>의 action과 method를 설정해주세요.
           </p>
@@ -184,36 +183,5 @@
       </p>
     </div>
   </footer>
-  <div class="sticky-bottom-cta">
-    <div class="sticky-inner">
-      <div class="sticky-text">
-        <span class="badge-mini">마감 임박</span>
-        <span class="text-main">혼자 고민하면 늦습니다. <strong>1:1 설계</strong>로 시작하세요.</span>
-      </div>
-      <a href="apply.html" class="btn btn-accent btn-sm">
-        <i class="ri-rocket-2-line"></i> 무료 코칭 신청하기
-      </a>
-    </div>
-  </div>
-
-  <script>
-    const revealTargets = document.querySelectorAll('.section');
-    revealTargets.forEach((target) => target.classList.add('reveal'));
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-
-    revealTargets.forEach((target) => observer.observe(target));
-  </script>
-
 </body>
 </html>

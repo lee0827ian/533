@@ -5,7 +5,6 @@
   <title>533 코칭 비용 & 조건</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
   <header class="gnb">
@@ -22,7 +21,7 @@
   </header>
   <section class="section section-light">
     <div class="section-inner">
-      <h1 class="section-title"><i class="ri-money-dollar-circle-line"></i> 533 1:1 코칭 비용 & 조건</h1>
+      <h1 class="section-title">💰 533 1:1 코칭 비용 & 조건</h1>
       <p class="section-subtitle">
         가격은 <strong>완전 공개형</strong>입니다.<br />
         대신, 한 달 10팀 내외만 선발하여 대표가 직접 코칭합니다.
@@ -31,7 +30,7 @@
       <!-- 요약 카드 -->
       <div class="features-grid">
         <div class="feature-card">
-          <div class="feature-icon"><i class="ri-user-star-line"></i></div>
+          <div class="feature-icon">👶</div>
           <h4>예비창업자 코칭</h4>
           <p>
             · 월 구독료: <strong>50만 원</strong><br />
@@ -41,7 +40,7 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon"><i class="ri-run-line"></i></div>
+          <div class="feature-icon">🏃‍♂️</div>
           <h4>기창업자 코칭</h4>
           <p>
             · 월 구독료: <strong>300만 원</strong><br />
@@ -51,7 +50,7 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon"><i class="ri-line-chart-line"></i></div>
+          <div class="feature-icon">📈</div>
           <h4>성과 기반 지분 구조</h4>
           <p>
             · <strong>기업가치 100억 원 이상 달성 시</strong> 지분 5%<br />
@@ -145,41 +144,10 @@
           먼저 1:1 무료 코칭에서 현재 단계와 적합성을 함께 진단해보세요.
         </p>
         <a href="apply.html" class="btn btn-accent">
-          <i class="ri-graduation-cap-line"></i> 1:1 무료 코칭 먼저 받아보기
+          🎓 1:1 무료 코칭 먼저 받아보기
         </a>
       </div>
     </div>
   </section>
-  <div class="sticky-bottom-cta">
-    <div class="sticky-inner">
-      <div class="sticky-text">
-        <span class="badge-mini">마감 임박</span>
-        <span class="text-main">혼자 고민하면 늦습니다. <strong>1:1 설계</strong>로 시작하세요.</span>
-      </div>
-      <a href="apply.html" class="btn btn-accent btn-sm">
-        <i class="ri-rocket-2-line"></i> 무료 코칭 신청하기
-      </a>
-    </div>
-  </div>
-
-  <script>
-    const revealTargets = document.querySelectorAll('.section');
-    revealTargets.forEach((target) => target.classList.add('reveal'));
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-
-    revealTargets.forEach((target) => observer.observe(target));
-  </script>
-
 </body>
 </html>
