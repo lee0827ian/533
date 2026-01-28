@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>533 창업설계: 실패를 원천 차단하는 조립식 시스템</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --bg-soft: #ffffff;
+      --accent: #2563eb;
+      --accent-soft: rgba(37, 99, 235, 0.08);
+      --accent-alt: #f97316;
+      --text-main: #0f172a;
+      --text-sub: #6b7280;
+      --border-soft: #d4d7e5;
+      --radius-xl: 18px;
+      --radius-lg: 14px;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Noto Sans KR",
+        system-ui, sans-serif;
+      background: linear-gradient(180deg, #f4f7fb 0%, #ffffff 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    .section {
+      padding: 48px 20px;
+    }
+
+    .section-inner {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+      color: #020617;
+    }
+
+    .section-subtitle {
+      font-size: 14px;
+      color: var(--text-sub);
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    .grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+
+    .grid-2col.reverse {
+      direction: rtl;
+    }
+
+    .grid-2col.reverse > * {
+      direction: ltr;
+    }
+
+    .image-block {
+      border-radius: var(--radius-xl);
+      background: #ffffff;
+      border: 1px solid var(--border-soft);
+      padding: 16px;
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .image-block img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .image-placeholder {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .text-block h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #111827;
+    }
+
+    .text-block p {
+      font-size: 14px;
+      color: var(--text-sub);
+      margin-bottom: 12px;
+      line-height: 1.8;
+    }
+
+    .text-block p strong {
+      color: var(--accent-alt);
+    }
+
+    .highlight-box {
+      background: rgba(249, 115, 22, 0.08);
+      border-left: 4px solid var(--accent-alt);
+      padding: 16px;
+      border-radius: 8px;
+      margin: 16px 0;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .highlight-box strong {
+      color: var(--accent-alt);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .feature-card {
+      background: #ffffff;
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
+    }
+
+    .feature-icon {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .feature-card h4 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #111827;
+    }
+
+    .feature-card p {
+      font-size: 12px;
+      color: var(--text-sub);
+      line-height: 1.6;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+    }
+
+    .comparison-table th {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #ffffff;
+      padding: 16px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .comparison-table td {
+      padding: 16px;
+      border-bottom: 1px solid var(--border-soft);
+      font-size: 13px;
+    }
+
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .comparison-table tr:nth-child(even) {
+      background: #f9fafb;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .badge.alt {
+      background: rgba(249, 115, 22, 0.1);
+      color: var(--accent-alt);
+    }
+
+    .phases-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .phase {
+      background: #ffffff;
+      border: 2px solid var(--border-soft);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      position: relative;
+    }
+
+    .phase.highlight {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .phase-number {
+      display: inline-block;
+      background: var(--accent);
+      color: #ffffff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .phase.highlight .phase-number {
+      background: var(--accent-alt);
+    }
+
+    .phase-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 8px;
+    }
+
+    .phase-duration {
+      font-size: 11px;
+      color: var(--text-sub);
+      margin-bottom: 10px;
+    }
+
+    .phase-list {
+      list-style: none;
+      padding: 0;
+      font-size: 12px;
+      color: var(--text-sub);
+    }
+
+    .phase-list li {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 4px;
+      line-height: 1.4;
+    }
+
+    .phase-list li::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .principle-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .principle-card {
+      background: #ffffff;
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+    }
+
+    .principle-card h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 12px;
+    }
+
+    .principle-card p {
+      font-size: 13px;
+      color: var(--text-sub);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .principle-card ul {
+      list-style: none;
+      padding: 0;
+      font-size: 12px;
+      color: var(--text-sub);
+    }
+
+    .principle-card ul li {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .principle-card ul li::before {
+      content: "→";
+      color: var(--accent-alt);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #ffffff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--accent);
+      border: 2px solid var(--accent);
+    }
+
+    .btn-secondary:hover {
+      background: var(--accent-soft);
+    }
+
+    .btn-accent {
+      background: linear-gradient(135deg, #f97316, #ea580c);
+      color: #ffffff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn-accent:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(249, 115, 22, 0.3);
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .section-light {
+      background: #ffffff;
+    }
+
+    .section-soft {
+      background: rgba(37, 99, 235, 0.02);
+    }
+
+    @media (max-width: 900px) {
+      .grid-2col {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .features-grid,
+      .principle-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .phases-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .section-title {
+        font-size: 24px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .section {
+        padding: 32px 16px;
+      }
+
+      .phases-container {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-row {
+        flex-direction: column;
+      }
+
+      .btn {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HERO SECTION -->
+  <section class="section section-light">
+    <div class="section-inner">
+      <h1 class="section-title">
+        533 창업설계: 실패를 원천 차단하는 조립식 시스템
+      </h1>
+      <p class="section-subtitle">
+        고객이 먼저 돈을 내는 구조부터 시작하는 '설계 기반 창업'.<br />
+        투자자나 정부지원이 아니라, <strong>오너핏 고객과 재구매 80%</strong>를
+        기준으로 회사를 설계하는 1:1 공동창업형 코칭입니다.
+      </p>
+
+      <div class="grid-2col">
+        <div class="text-block">
+          <h3>🎯 왜 대부분의 스타트업은 실패하는가?</h3>
+          <p>
+            많은 창업자들이 <strong>아이디어의 완성도</strong>에만 집중합니다.
+            하지만 실제로 필요한 것은 고객이 돈을 낼 준비가 되어 있는지,
+            그리고 그 구조가 <strong>자동화될 수 있는지</strong>를 먼저 확인하는
+            것입니다.
+          </p>
+          <p>
+            533 설계론은 이 순서를 뒤집습니다. 개발에 앞서
+            <strong>수익모델 → 고객확보 → 재구매율 → 자동화</strong>를 먼저
+            설계하고, 이를 바탕으로 시스템을 만드는 방식입니다.
+          </p>
+
+          <div class="highlight-box">
+            <strong>핵심:</strong> "앱 없이도 선매출이 가능한가?"를 먼저 물어보세요.
+            그것이 확인되어야만 개발에 들어갑니다.
+          </div>
+        </div>
+
+        <div class="image-block">
+          <div class="image-placeholder">
+            📊 Death Valley 그래프<br />
+            (대부분의 스타트업은 여기서 망합니다)
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 핵심 원리 섹션 -->
+  <section class="section section-soft">
+    <div class="section-inner">
+      <h2 class="section-title">🔑 533 설계론의 핵심 원리</h2>
+      <p class="section-subtitle">
+        "수익모델 → 검증 → 개발 → (운영) → 성장" 순서로 회사를 설계합니다
+      </p>
+
+      <div class="grid-2col reverse">
+        <div class="image-block">
+          <div class="image-placeholder">
+            📈 고통지수 10점 피라미드<br />
+            (고객 선택 기준)
+          </div>
+        </div>
+
+        <div class="text-block">
+          <h3>Step 1: 고객의 '고통지수' 10점을 찾기</h3>
+          <p>
+            창업의 첫 단계는 "정말 돈을 낼 준비가 된 고객"을 찾는 것입니다.
+            우리는 이를 <strong>'고통지수 10점'</strong>이라고 부릅니다.
+          </p>
+          <p>
+            고통지수가 7점 이상인 고객을 대상으로 하면, 별도의 광고나
+            마케팅 없이도 입소문으로 고객이 모입니다. 이것이
+            <strong>초기 생존의 핵심</strong>입니다.
+          </p>
+
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🎯</div>
+              <h4>타겟 명확</h4>
+              <p>문제를 가진 특정 고객층을 정의</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">💰</div>
+              <h4>객단가</h4>
+              <p>월 25만원대의 표준 요금</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🔄</div>
+              <h4>재구매</h4>
+              <p>80% 이상의 재구매율 목표</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 커리큘럼 섹션 -->
+  <section class="section section-light">
+    <div class="section-inner">
+      <h2 class="section-title">📚 533 커리큘럼: 5개 모듈, 33개 항목, 192개 요소</h2>
+      <p class="section-subtitle">
+        7년, 2만 시간 이상 현장에서 다듬은 창업 설계 시스템입니다.
+        비즈니스 스킬 · 자동화 시스템 · CEO 자질, 세 축으로
+        533개 항목을 구조화했습니다.
+      </p>
+
+      <div class="principle-grid">
+        <div class="principle-card">
+          <div class="badge">비즈니스 스킬</div>
+          <h4>창업 A~Z, 100억까지의 시뮬레이션</h4>
+          <p>
+            고객 발굴부터 자동화 시스템까지, 모든 단계를 체크리스트 중심으로
+            설계합니다.
+          </p>
+          <ul>
+            <li>아이템 발굴 · 타겟 고객 분석</li>
+            <li>수익모델 설계 (순이익률 30%↑)</li>
+            <li>서비스 기획 & 개발 범위 정의</li>
+            <li>팀 세팅 · 사업계획서 · 투자유치</li>
+          </ul>
+        </div>
+
+        <div class="principle-card">
+          <div class="badge alt">자동화 시스템</div>
+          <h4>"장사"에서 "사업·플랫폼"으로</h4>
+          <p>
+            처음부터 자동화를 전제로 설계하여, 스케일이 커져도 사람을 계속
+            늘리지 않는 구조를 만듭니다.
+          </p>
+          <ul>
+            <li>업무 매뉴얼화 (전·중·후 프로세스)</li>
+            <li>온·오프 자동화 시스템</li>
+            <li>수익모델별 4축 설계 (매출·비용·이익·가치)</li>
+            <li>마케팅 지표 구조화</li>
+          </ul>
+        </div>
+
+        <div class="principle-card">
+          <div class="badge">CEO 자질</div>
+          <h4>망하지 않는 리더의 자질</h4>
+          <p>
+            기술이나 자본이 아니라, CEO의 멘탈과 결정 구조가 회사의 생존을
+            결정합니다.
+          </p>
+          <ul>
+            <li>자존감 · 멘탈 · 감정 컨트롤</li>
+            <li>리더십 · 소통 · 갈등 관리</li>
+            <li>철학 · 꿈·목적·목표 설계</li>
+            <li>성장 사업을 버티는 '시선' 만들기</li>
+          </ul>
+        </div>
+
+        <div class="principle-card">
+          <div class="badge alt">실전 도구</div>
+          <h4>매뉴얼화 & 자동화 도구</h4>
+          <p>
+            모든 프로세스를 엑셀과 도식화로 관리하여, 팀이 없어도 돌아가는
+            시스템을 만듭니다.
+          </p>
+          <ul>
+            <li>대중소세문해돈수 툴</li>
+            <li>팀 설계 & 일정표</li>
+            <li>수익모델 · 마케팅 설계서</li>
+            <li>화면 설계서 & 기능 정의서</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 18개월 로드맵 섹션 -->
+  <section class="section section-soft">
+    <div class="section-inner">
+      <h2 class="section-title">🗺️ 18개월 안에 100억까지 가는 단계별 로드맵</h2>
+      <p class="section-subtitle">
+        각 단계는 숫자로 판단합니다. "다음 단계로 넘어가도 되는가?"를 정확히
+        측정할 수 있어야 합니다.
+      </p>
+
+      <div class="phases-container">
+        <div class="phase">
+          <div class="phase-number">0</div>
+          <div class="phase-title">아이템 · 고객 · 문제</div>
+          <div class="phase-duration">5개월</div>
+          <ul class="phase-list">
+            <li>고객 인터뷰 30명 × 3회</li>
+            <li>유료 체험단 30명 × 3회</li>
+            <li>성장 아이템 정의</li>
+            <li>수익모델 검증</li>
+          </ul>
+        </div>
+
+        <div class="phase">
+          <div class="phase-number">1</div>
+          <div class="phase-title">스타트업 가치 3억</div>
+          <div class="phase-duration">6개월</div>
+          <ul class="phase-list">
+            <li>진짜 유료 고객 30명</li>
+            <li>월 객단가: 25만원</li>
+            <li>재구매율 80%↑</li>
+            <li>매출 1억 · 이익 3천</li>
+          </ul>
+        </div>
+
+        <div class="phase highlight">
+          <div class="phase-number">2</div>
+          <div class="phase-title">스타트업 가치 30억</div>
+          <div class="phase-duration">4개월</div>
+          <ul class="phase-list">
+            <li>유료 고객 300명</li>
+            <li>매출 10억</li>
+            <li>순이익 3억</li>
+            <li>재구매율 80%↑</li>
+          </ul>
+        </div>
+
+        <div class="phase">
+          <div class="phase-number">3</div>
+          <div class="phase-title">스타트업 가치 100억</div>
+          <div class="phase-duration">3개월</div>
+          <ul class="phase-list">
+            <li>유료 고객 1,000명</li>
+            <li>매출 30억</li>
+            <li>이익 10억</li>
+            <li>가치 100억 진입</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        각 단계는 <strong>10점 만점 기준 7점 이상</strong>이 되어야만 다음 단계로
+        넘어갑니다. "90도 성장"으로, 생존의 계곡 없이 안정적으로 스케일합니다.
+      </div>
+    </div>
+  </section>
+
+  <!-- 실전 사례 섹션 (티저) -->
+  <section class="section section-light">
+    <div class="section-inner">
+      <h2 class="section-title">💡 실제 사례: 어떻게 적용되는가?</h2>
+      <p class="section-subtitle">
+        "앱 없어도 됩니다" 주의 vs "매뉴얼이 곧 시스템" 실천
+        <br />
+        자세한 스토리는 별도의 <strong>사례 페이지</strong>에서 확인하실 수 있습니다.
+      </p>
+
+      <div class="grid-2col">
+        <div class="text-block">
+          <h3>Case 1: 아베방 가자</h3>
+          <p style="font-size: 12px; color: #666; margin-bottom: 8px;">
+            (세심한 홈짓몰 운영 서비스)
+          </p>
+          <p>
+            <strong>문제:</strong> 앱 개발에만 6개월, 비용 수천만 원 소요
+          </p>
+          <p>
+            <strong>해결:</strong> 엑셀 기반 고객 관리 시스템 + 문자 자동화
+          </p>
+          <p>
+            <strong>결과:</strong> 1기 참가자 자구매 100% 성공, 추천 입소문 확산
+          </p>
+        </div>
+
+        <div class="image-block">
+          <div class="image-placeholder">
+            📋 아베방 가자 운영 매뉴얼<br />
+            (체계화된 엑셀 기반 관리)
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-2col reverse">
+        <div class="text-block">
+          <h3>Case 2: 영어 아카데미 자동화</h3>
+          <p style="font-size: 12px; color: #666; margin-bottom: 8px;">
+            (온라인 영어 교육 서비스)
+          </p>
+          <p>
+            <strong>문제:</strong> 원장 혼자 모든 업무 담당, 스케일 불가능
+          </p>
+          <p>
+            <strong>해결:</strong> 교수 커리큘럼 + 실습 프로세스 온라인/자동화
+          </p>
+          <p>
+            <strong>결과:</strong> 매뉴얼화로 강사 교육 시간 70% 단축
+          </p>
+        </div>
+
+        <div class="image-block">
+          <div class="image-placeholder">
+            📚 교육 프로세스 매뉴얼<br />
+            (표준화된 강의 흐름)
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 시스템 전환 섹션 -->
+  <section class="section section-soft">
+    <div class="section-inner">
+      <h2 class="section-title">🔄 장사에서 사업으로의 시스템 전환</h2>
+      <p class="section-subtitle">
+        창업 초기의 "장사" 방식에서 "사업·플랫폼" 운영으로 전환하는 과정
+      </p>
+
+      <div class="grid-2col">
+        <div class="image-block">
+          <div class="image-placeholder">
+            🔄 System Transition 다이어그램<br />
+            (사람 중심 → 시스템 중심)
+          </div>
+        </div>
+
+        <div class="text-block">
+          <h3>Merchant(장사) vs Business(사업)</h3>
+
+          <div style="margin-bottom: 20px;">
+            <p style="font-weight: 700; color: #111827; margin-bottom: 8px;">
+              ❌ 장사 (Merchant)
+            </p>
+            <ul
+              style="
+                list-style: none;
+                padding: 0;
+                font-size: 13px;
+                color: #666;
+              "
+            >
+              <li style="margin-bottom: 6px;">
+                · 사장이 없으면 매출 정지
+              </li>
+              <li style="margin-bottom: 6px;">
+                · 노동 집약적
+              </li>
+              <li>· 이익 중심</li>
+            </ul>
+          </div>
+
+          <div>
+            <p style="font-weight: 700; color: #111827; margin-bottom: 8px;">
+              ✅ 사업 (Business)
+            </p>
+            <ul
+              style="
+                list-style: none;
+                padding: 0;
+                font-size: 13px;
+                color: #666;
+              "
+            >
+              <li style="margin-bottom: 6px;">
+                · 사장이 없어도 매출 운영
+              </li>
+              <li style="margin-bottom: 6px;">
+                · 시스템 자동화 중심
+              </li>
+              <li>· 기업가치 성장 중심</li>
+            </ul>
+          </div>
+
+          <div class="highlight-box" style="margin-top: 16px;">
+            <strong>Holistic Coaching Areas:</strong>
+            <ul
+              style="
+                list-style: none;
+                padding: 0;
+                font-size: 13px;
+                margin-top: 8px;
+              "
+            >
+              <li>• <strong>Biz Skill:</strong> 아이템, 수익모델, 마케팅</li>
+              <li>
+                • <strong>Founder Mindset:</strong> CEO 자질, 회복탄력성, 신념
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1:1 코칭 섹션 -->
+  <section class="section section-light" id="coaching">
+    <div class="section-inner">
+      <h2 class="section-title">🎓 1:1 공동창업형 코칭</h2>
+      <p class="section-subtitle">
+        단순한 "조언자"가 아니라, CTO·CEO·CFO 역할을 함께 수행하는 공동창업자형
+        코칭입니다.
+      </p>
+
+      <div class="principle-grid">
+        <div class="principle-card">
+          <h4>📋 코칭 구조</h4>
+          <ul>
+            <li><strong>형태:</strong> 100% 1:1 맞춤 코칭</li>
+            <li><strong>코치:</strong> 대표가 직접 코칭</li>
+            <li><strong>정원:</strong> 한 달 10팀 내외 소수 선발제</li>
+            <li><strong>빈도:</strong> 주 2회, 1시간~1시간 30분</li>
+            <li><strong>기간:</strong> 1년~1년 6개월</li>
+            <li>
+              <strong>시간:</strong> 코칭 받는 분의
+              <u>가능 시간대에 맞춰 1:1 조율</u>
+            </li>
+          </ul>
+        </div>
+
+        <div class="principle-card">
+          <h4>💰 성과 정산 구조</h4>
+          <ul>
+            <li><strong>예비창업자:</strong> 월 50만 원</li>
+            <li><strong>기창업자:</strong> 월 300만 원</li>
+            <li><strong>성과 공유:</strong> 기업가치 100억↑ 달성 시 지분 5%</li>
+            <li><strong>미달성:</strong> 지분 정산 없음</li>
+            <li>
+              "우리가 함께 성공할 때만, 함께 이익을 나눕니다"
+            </li>
+          </ul>
+        </div>
+
+        <div class="principle-card">
+          <h4>🧠 멘탈 · 라이프 통합 코칭</h4>
+          <ul>
+            <li>비즈니스 설계뿐 아니라, 대표의 멘탈/에너지 관리 포함</li>
+            <li>창업 스트레스, 번아웃, 의사결정 피로도까지 함께 관리</li>
+            <li>대표 개인의 삶·가치관·관계까지 고려한 설계</li>
+          </ul>
+        </div>
+
+        <div class="principle-card">
+          <h4>✅ 첫 무료 코칭에서 확인하는 것</h4>
+          <ul>
+            <li>현재 창업 단계 진단</li>
+            <li>수익모델 · 재구매 구조 가능성</li>
+            <li>자동화 시스템 설계 가능성</li>
+            <li>18개월 로드맵의 적합 여부</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 차별점 섹션 -->
+  <section class="section section-soft" id="differentiation">
+    <div class="section-inner">
+      <h2 class="section-title">🌟 왜 533 1:1 코칭이 다른가?</h2>
+      <p class="section-subtitle">
+        일반적인 창업 교육/그룹 코칭과 비교했을 때, 구조 자체가 다릅니다.
+      </p>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>일반 창업 교육/그룹 코칭</th>
+            <th>533 1:1 공동창업형 코칭</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>코칭 방식</td>
+            <td>강의 중심, 다수 인원 대상</td>
+            <td><strong>대표가 직접 진행하는 1:1 코칭</strong></td>
+          </tr>
+          <tr>
+            <td>정원</td>
+            <td>정원 제한이 없거나 수십 명 단위</td>
+            <td><strong>한 달 10팀 내외 소수 정예 운영</strong></td>
+          </tr>
+          <tr>
+            <td>시간</td>
+            <td>정해진 시간표, 참여자가 맞춰야 함</td>
+            <td>
+              <strong>완전 1:1 스케줄링</strong><br />
+              └ 코칭 받는 분의 일정에 맞춰 시간 조율
+            </td>
+          </tr>
+          <tr>
+            <td>관리 범위</td>
+            <td>사업·기획·마케팅 일부에 한정</td>
+            <td>
+              <strong>비즈니스 설계 + 개인 멘탈/라이프 통합</strong><br />
+              └ 사업 성장과 대표의 삶을 함께 설계
+            </td>
+          </tr>
+          <tr>
+            <td>관계</td>
+            <td>외부 멘토/강사</td>
+            <td>
+              <strong>공동창업자형 파트너</strong><br />
+              └ CTO/CEO/CFO 역할을 함께 수행
+            </td>
+          </tr>
+          <tr>
+            <td>목표</td>
+            <td>지식 전달, 단기 성과 중심</td>
+            <td>
+              <strong>18개월 내 100억 가치 설계</strong><br />
+              └ 선매출·재구매·자동화까지 설계 기반
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 추천 대상 섹션 -->
+  <section class="section section-light" id="guide">
+    <div class="section-inner">
+      <h2 class="section-title">👥 추천 대상</h2>
+      <p class="section-subtitle">
+        이런 창업가라면 533 설계론이 큰 도움이 될 것입니다.
+      </p>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🚀</div>
+          <h4>성장형 사업 준비 중</h4>
+          <p>
+            IT 플랫폼, 교육, 커뮤니티, 서비스 등 스케일이 가능한 사업을
+            계획 중인 경우
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🤔</div>
+          <h4>감으로 하는 창업 탈출</h4>
+          <p>
+            지금까지 감에만 의존했던 창업 방식에서 벗어나 "설계 기반"으로
+            전환하고 싶은 경우
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">💪</div>
+          <h4>초기 자금 최소화</h4>
+          <p>
+            투자자나 정부지원에 의존하지 않고, 고객의 선매출로 살아남는
+            회사를 만들고 싶은 경우
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h4>재구매 구조 설계</h4>
+          <p>
+            한 번의 구매가 아니라 지속적인 재구매가 가능한 수익모델을
+            설계하고 싶은 경우
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🔄</div>
+          <h4>자동화 시스템 구축</h4>
+          <p>
+            성장하면서도 인원을 무한정 늘리지 않고 시스템화하여 운영하고
+            싶은 경우
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h4>빠른 검증과 피드백</h4>
+          <p>
+            1년 이상 개발하는 대신, 수개월 내에 고객 반응을 받고 빠르게
+            반복하고 싶은 경우
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA 섹션 -->
+  <section class="section section-soft">
+    <div class="section-inner">
+      <div style="text-align: center;">
+        <h2 class="section-title">지금 시작하세요</h2>
+        <p class="section-subtitle">
+          첫 무료 코칭에서 당신의 사업이 정말 성장 가능한지,
+          <br />
+          그리고 533 시스템이 적합한지 함께 확인합니다.
+        </p>
+
+        <div class="cta-row" style="justify-content: center;">
+          <a href="apply.html" class="btn btn-accent">
+            🎓 1:1 무료 코칭 신청하기
+          </a>
+          <a href="cases.html" class="btn btn-primary">
+            📂 실제 코칭 사례 보기
+          </a>
+          <a href="pricing.html" class="btn btn-secondary">
+            💰 코칭 비용 & 조건 보기
+          </a>
+          <a href="#guide" class="btn btn-secondary">
+            📖 사전 안내서 보기
+          </a>
+        </div>
+
+        <p style="font-size: 12px; color: var(--text-sub); margin-top: 20px;">
+          진행 방식: 온라인 1:1 코칭 · 과제 · 체크리스트 · 도식화 중심 <br />
+          문의사항이 있으신가요? contact@533.co.kr로 연락주세요.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer
+    style="
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #ffffff;
+      padding: 32px 20px;
+      text-align: center;
+    "
+  >
+    <div style="max-width: 1120px; margin: 0 auto;">
+      <p style="font-size: 13px; margin-bottom: 8px;">
+        <strong>533 창업설계</strong> - 고객이 먼저 돈을 내는 시스템으로 만드는
+        100억 가치 스타트업
+      </p>
+      <p style="font-size: 11px; color: rgba(255, 255, 255, 0.8);">
+        © 2026 533 Startup Coaching. All rights reserved.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

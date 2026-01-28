@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>533 코칭 비용 & 조건</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --bg-soft: #ffffff;
+      --accent: #2563eb;
+      --accent-soft: rgba(37, 99, 235, 0.08);
+      --accent-alt: #f97316;
+      --text-main: #0f172a;
+      --text-sub: #6b7280;
+      --border-soft: #d4d7e5;
+      --radius-xl: 18px;
+      --radius-lg: 14px;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Noto Sans KR",
+        system-ui, sans-serif;
+      background: linear-gradient(180deg, #f4f7fb 0%, #ffffff 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    .section {
+      padding: 48px 20px;
+    }
+
+    .section-inner {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+      color: #020617;
+    }
+
+    .section-subtitle {
+      font-size: 14px;
+      color: var(--text-sub);
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .feature-card {
+      background: #ffffff;
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+    }
+
+    .feature-icon {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .feature-card h4 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #111827;
+    }
+
+    .feature-card p {
+      font-size: 12px;
+      color: var(--text-sub);
+      line-height: 1.6;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+    }
+
+    .comparison-table th {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #ffffff;
+      padding: 16px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .comparison-table td {
+      padding: 16px;
+      border-bottom: 1px solid var(--border-soft);
+      font-size: 13px;
+    }
+
+    .comparison-table tr:nth-child(even) {
+      background: #f9fafb;
+    }
+
+    .highlight-box {
+      background: rgba(249, 115, 22, 0.08);
+      border-left: 4px solid var(--accent-alt);
+      padding: 16px;
+      border-radius: 8px;
+      margin: 16px 0;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-accent {
+      background: linear-gradient(135deg, #f97316, #ea580c);
+      color: #ffffff;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+    }
+
+    .btn-accent:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(249, 115, 22, 0.3);
+    }
+
+    @media (max-width: 900px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title {
+        font-size: 24px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .section {
+        padding: 32px 16px;
+      }
+
+      .btn {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="section section-light">
+    <div class="section-inner">
+      <h1 class="section-title">💰 533 1:1 코칭 비용 & 조건</h1>
+      <p class="section-subtitle">
+        가격은 <strong>완전 공개형</strong>입니다.<br />
+        대신, 한 달 10팀 내외만 선발하여 대표가 직접 코칭합니다.
+      </p>
+
+      <!-- 요약 카드 -->
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">👶</div>
+          <h4>예비창업자 코칭</h4>
+          <p>
+            · 월 구독료: <strong>50만 원</strong><br />
+            · 100억 가치 스타트업을 목표로 하는 예비창업자 대상<br />
+            · 아이템/수익모델/고객 검증부터 함께 설계
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🏃‍♂️</div>
+          <h4>기창업자 코칭</h4>
+          <p>
+            · 월 구독료: <strong>300만 원</strong><br />
+            · 이미 사업을 운영 중인 창업자/대표 대상<br />
+            · 재구매·구독·자동화 구조로 회사를 재설계
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📈</div>
+          <h4>성과 기반 지분 구조</h4>
+          <p>
+            · <strong>기업가치 100억 원 이상 달성 시</strong> 지분 5%<br />
+            · 미달성 시 지분 정산 없음<br />
+            · “둘 다 이길 때만, 함께 나눕니다”라는 원칙
+          </p>
+        </div>
+      </div>
+
+      <!-- 상세 테이블 -->
+      <h2 class="section-title" style="margin-top: 40px; font-size: 22px;">
+        비용 구조 상세
+      </h2>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>예비창업자</th>
+            <th>기창업자</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>월 구독료</td>
+            <td>월 50만 원</td>
+            <td>월 300만 원</td>
+          </tr>
+          <tr>
+            <td>코칭 방식</td>
+            <td colspan="2">
+              · 100% 온라인 <strong>1:1 코칭</strong><br />
+              · 주 2회, 회당 50~90분 코칭<br />
+              · 과제 수행/진행 속도에 따라 유동 조정
+            </td>
+          </tr>
+          <tr>
+            <td>코치</td>
+            <td colspan="2">
+              · <strong>대표가 직접 코칭</strong><br />
+              · CTO/CEO/CFO 역할을 함께 수행하는 공동창업자형 코칭
+            </td>
+          </tr>
+          <tr>
+            <td>정원</td>
+            <td colspan="2">
+              · <strong>한 달 10팀 내외 소수 정예</strong><br />
+              · 지원 후 1:1 무료 코칭에서 상호 적합성 검토
+            </td>
+          </tr>
+          <tr>
+            <td>시간</td>
+            <td colspan="2">
+              · 정해진 강의 시간이 아니라, <strong>대표님의 가능 시간대 기준</strong>으로 스케줄 조율<br />
+              · 사업/직장/가정 상황을 고려한 현실적인 시간 설계
+            </td>
+          </tr>
+          <tr>
+            <td>포함 범위</td>
+            <td colspan="2">
+              · 수익모델·고객·재구매·자동화 시스템 설계<br />
+              · 대표 개인의 멘탈/에너지/의사결정 구조 코칭<br />
+              · 18개월 100억 가치 로드맵 설계 및 점검
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- 성과 기반 구조 설명 -->
+      <h2 class="section-title" style="margin-top: 40px; font-size: 22px;">
+        성과 기반 지분 구조
+      </h2>
+      <p class="section-subtitle">
+        단순 컨설팅 비용이 아니라, <strong>성과를 전제로 한 파트너십 구조</strong>입니다.
+      </p>
+
+      <div class="highlight-box">
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px;">
+          <li>• <strong>기업가치 100억 원 이상</strong> 달성 시: 코치에게 지분 5% 양도</li>
+          <li>• 목표 미달성 시: 지분 양도 없음</li>
+          <li>
+            • 코칭의 목표는 “20억 한 번 벌고 끝나는 장사”가 아니라,
+            <strong>지속 가능한 100억 가치 구조</strong>를 만드는 것입니다.
+          </li>
+        </ul>
+      </div>
+
+      <!-- 안내 -->
+      <div style="margin-top: 40px; text-align: center;">
+        <p class="section-subtitle">
+          구체적인 적용 방식과 기간은 사업 상황에 따라 달라집니다.<br />
+          먼저 1:1 무료 코칭에서 현재 단계와 적합성을 함께 진단해보세요.
+        </p>
+        <a href="apply.html" class="btn btn-accent">
+          🎓 1:1 무료 코칭 먼저 받아보기
+        </a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
