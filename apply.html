@@ -4,168 +4,32 @@
   <meta charset="UTF-8" />
   <title>533 1:1 무료 코칭 신청</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    :root {
-      --bg: #f4f7fb;
-      --bg-soft: #ffffff;
-      --accent: #2563eb;
-      --accent-soft: rgba(37, 99, 235, 0.08);
-      --accent-alt: #f97316;
-      --text-main: #0f172a;
-      --text-sub: #6b7280;
-      --border-soft: #d4d7e5;
-      --radius-xl: 18px;
-      --radius-lg: 14px;
-      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.12);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Noto Sans KR",
-        system-ui, sans-serif;
-      background: linear-gradient(180deg, #f4f7fb 0%, #ffffff 100%);
-      color: var(--text-main);
-      line-height: 1.6;
-    }
-
-    .section {
-      padding: 48px 20px;
-    }
-
-    .section-inner {
-      width: 100%;
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    .section-title {
-      font-size: 28px;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      margin-bottom: 12px;
-      color: #020617;
-    }
-
-    .section-subtitle {
-      font-size: 14px;
-      color: var(--text-sub);
-      margin-bottom: 24px;
-      line-height: 1.7;
-    }
-
-    .highlight-box {
-      background: rgba(249, 115, 22, 0.08);
-      border-left: 4px solid var(--accent-alt);
-      padding: 16px;
-      border-radius: 8px;
-      margin: 16px 0;
-      font-size: 13px;
-      line-height: 1.7;
-    }
-
-    .principle-card {
-      background: #ffffff;
-      border: 1px solid var(--border-soft);
-      border-radius: var(--radius-lg);
-      padding: 20px;
-      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
-    }
-
-    .principle-card h4 {
-      font-size: 16px;
-      font-weight: 700;
-      color: #111827;
-      margin-bottom: 8px;
-    }
-
-    .principle-card p {
-      font-size: 13px;
-      color: var(--text-sub);
-      margin-bottom: 8px;
-    }
-
-    label {
-      font-size: 13px;
-      color: #111827;
-    }
-
-    input[type="radio"] {
-      margin-right: 4px;
-    }
-
-    input[type="text"],
-    textarea {
-      border: 1px solid var(--border-soft);
-      border-radius: 8px;
-      outline: none;
-      box-shadow: none;
-    }
-
-    input[type="text"]:focus,
-    textarea:focus {
-      border-color: var(--accent);
-    }
-
-    form {
-      display: grid;
-      gap: 24px;
-      margin-top: 24px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 20px;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      font-size: 13px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      white-space: nowrap;
-    }
-
-    .btn-accent {
-      background: linear-gradient(135deg, #f97316, #ea580c);
-      color: #ffffff;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
-    }
-
-    .btn-accent:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 24px rgba(249, 115, 22, 0.3);
-    }
-
-    @media (max-width: 600px) {
-      .section {
-        padding: 32px 16px;
-      }
-
-      .btn {
-        justify-content: center;
-        width: 100%;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
+  <header class="gnb">
+    <div class="gnb-inner">
+      <a class="gnb-logo" href="index.html">533 창업설계</a>
+      <nav class="gnb-nav">
+        <a href="index.html">홈</a>
+        <a href="cases.html">코칭 사례</a>
+        <a href="pricing.html">비용 & 조건</a>
+        <a href="index.html#guide">사전 안내서</a>
+        <a class="gnb-cta" href="apply.html">신청하기</a>
+      </nav>
+    </div>
+  </header>
   <section class="section section-light">
-    <div class="section-inner">
-      <h1 class="section-title">🎓 533 스타트업 1:1 무료 코칭 신청</h1>
+    <div class="section-inner section-inner-narrow">
+      <h1 class="section-title"><i class="ri-graduation-cap-line"></i> 533 스타트업 1:1 무료 코칭 신청</h1>
       <p class="section-subtitle">
         본 코칭은 <strong>IT 플랫폼 기반 스타트업, 100억 가치 목표</strong>를 전제로 합니다.<br />
         “교육”이 아니라 “설계”를 원하는 분만 신청해주세요.
       </p>
 
       <div class="highlight-box">
-        <p style="font-size: 13px; margin-bottom: 4px;">
+        <p style="font-size: 16px; margin-bottom: 4px;">
           · 정부지원 컨설팅 목적이 아닌, <strong>실제 회사를 함께 설계</strong>하는 1:1 코칭입니다.<br />
           · 초기 자금 투자/마이너스 없이, 18개월 내 100억 가치 스타트업을 목표로 합니다.<br />
           · 한 달 10팀 내외만 선발하며, <strong>대표가 직접 코칭</strong>합니다.
@@ -206,7 +70,7 @@
           <label style="display:block; margin-top:8px;">
             기타:
             <input type="text" name="q2_status_other"
-              style="width:100%; padding:6px 8px; margin-top:4px; font-size:13px;" />
+              style="width:100%; padding:6px 8px; margin-top:4px; font-size:16px;" />
           </label>
         </div>
 
@@ -222,7 +86,7 @@
           <label style="display:block; margin-top:8px;">
             기타:
             <input type="text" name="q3_fund_other"
-              style="width:100%; padding:6px 8px; margin-top:4px; font-size:13px;" />
+              style="width:100%; padding:6px 8px; margin-top:4px; font-size:16px;" />
           </label>
         </div>
 
@@ -255,7 +119,7 @@
           <label style="display:block; margin-top:8px;">
             기타 설명:
             <textarea name="q5_ownerfit_desc" rows="3"
-              style="width:100%; padding:6px 8px; margin-top:4px; font-size:13px;"></textarea>
+              style="width:100%; padding:6px 8px; margin-top:4px; font-size:16px;"></textarea>
           </label>
         </div>
 
@@ -276,7 +140,7 @@
           <label style="display:block; margin-top:8px;">
             추가로 남기고 싶은 의견:
             <textarea name="q6_comment" rows="3"
-              style="width:100%; padding:6px 8px; margin-top:4px; font-size:13px;"></textarea>
+              style="width:100%; padding:6px 8px; margin-top:4px; font-size:16px;"></textarea>
           </label>
         </div>
 
@@ -284,7 +148,7 @@
         <div class="principle-card">
           <h4>7. 창업을 하려는 이유와 얻고 싶은 결과는 무엇인가요? *</h4>
           <textarea name="q7_reason" rows="4" required
-            style="width:100%; padding:8px 10px; font-size:13px;"
+            style="width:100%; padding:8px 10px; font-size:16px;"
             placeholder="왜 창업을 하시려는지, 어떤 삶/결과를 얻고 싶으신지 구체적으로 적어주세요."></textarea>
         </div>
 
@@ -292,16 +156,16 @@
         <div class="principle-card">
           <h4>8. 이름 / 연락처 / 이메일 / 신청 경로 *</h4>
           <textarea name="q8_contact" rows="3" required
-            style="width:100%; padding:8px 10px; font-size:13px;"
+            style="width:100%; padding:8px 10px; font-size:16px;"
             placeholder="예) 홍길동 / 010-0000-0000 / hello@example.com / 블로그 글 보고 신청"></textarea>
         </div>
 
         <!-- 제출 버튼 -->
         <div style="text-align: center; margin-top: 8px;">
           <button type="submit" class="btn btn-accent">
-            🎓 1:1 무료 코칭 신청서 제출
+            <i class="ri-graduation-cap-line"></i> 1:1 무료 코칭 신청서 제출
           </button>
-          <p style="font-size: 11px; color: #6b7280; margin-top: 8px;">
+          <p style="font-size: 12px; color: #6b7280; margin-top: 8px;">
             * 실제 접수 방식(이메일/백엔드 연동 등)은 개발 환경에 맞게
             <code>&lt;form&gt;</code>의 action과 method를 설정해주세요.
           </p>
@@ -309,5 +173,47 @@
       </form>
     </div>
   </section>
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <p style="font-size: 13px; margin-bottom: 8px;">
+        <strong>533 창업설계</strong> - 고객이 먼저 돈을 내는 시스템으로 만드는
+        100억 가치 스타트업
+      </p>
+      <p style="font-size: 11px; color: rgba(255, 255, 255, 0.8);">
+        © 2026 533 Startup Coaching. All rights reserved.
+      </p>
+    </div>
+  </footer>
+  <div class="sticky-bottom-cta">
+    <div class="sticky-inner">
+      <div class="sticky-text">
+        <span class="badge-mini">마감 임박</span>
+        <span class="text-main">혼자 고민하면 늦습니다. <strong>1:1 설계</strong>로 시작하세요.</span>
+      </div>
+      <a href="apply.html" class="btn btn-accent btn-sm">
+        <i class="ri-rocket-2-line"></i> 무료 코칭 신청하기
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const revealTargets = document.querySelectorAll('.section');
+    revealTargets.forEach((target) => target.classList.add('reveal'));
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    revealTargets.forEach((target) => observer.observe(target));
+  </script>
+
 </body>
 </html>

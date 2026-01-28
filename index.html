@@ -4,452 +4,39 @@
   <meta charset="UTF-8" />
   <title>533 창업설계: 실패를 원천 차단하는 조립식 시스템</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    :root {
-      --bg: #f4f7fb;
-      --bg-soft: #ffffff;
-      --accent: #2563eb;
-      --accent-soft: rgba(37, 99, 235, 0.08);
-      --accent-alt: #f97316;
-      --text-main: #0f172a;
-      --text-sub: #6b7280;
-      --border-soft: #d4d7e5;
-      --radius-xl: 18px;
-      --radius-lg: 14px;
-      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.12);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Noto Sans KR",
-        system-ui, sans-serif;
-      background: linear-gradient(180deg, #f4f7fb 0%, #ffffff 100%);
-      color: var(--text-main);
-      line-height: 1.6;
-    }
-
-    .section {
-      padding: 48px 20px;
-    }
-
-    .section-inner {
-      width: 100%;
-      max-width: 1120px;
-      margin: 0 auto;
-    }
-
-    .section-title {
-      font-size: 28px;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      margin-bottom: 12px;
-      color: #020617;
-    }
-
-    .section-subtitle {
-      font-size: 14px;
-      color: var(--text-sub);
-      margin-bottom: 32px;
-      line-height: 1.7;
-    }
-
-    .grid-2col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-      align-items: center;
-      margin-bottom: 32px;
-    }
-
-    .grid-2col.reverse {
-      direction: rtl;
-    }
-
-    .grid-2col.reverse > * {
-      direction: ltr;
-    }
-
-    .image-block {
-      border-radius: var(--radius-xl);
-      background: #ffffff;
-      border: 1px solid var(--border-soft);
-      padding: 16px;
-      box-shadow: var(--shadow-soft);
-      overflow: hidden;
-    }
-
-    .image-block img {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-    }
-
-    .image-placeholder {
-      width: 100%;
-      aspect-ratio: 4/3;
-      background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent);
-      font-size: 14px;
-      font-weight: 600;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .text-block h3 {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 12px;
-      color: #111827;
-    }
-
-    .text-block p {
-      font-size: 14px;
-      color: var(--text-sub);
-      margin-bottom: 12px;
-      line-height: 1.8;
-    }
-
-    .text-block p strong {
-      color: var(--accent-alt);
-    }
-
-    .highlight-box {
-      background: rgba(249, 115, 22, 0.08);
-      border-left: 4px solid var(--accent-alt);
-      padding: 16px;
-      border-radius: 8px;
-      margin: 16px 0;
-      font-size: 13px;
-      line-height: 1.7;
-    }
-
-    .highlight-box strong {
-      color: var(--accent-alt);
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 24px;
-    }
-
-    .feature-card {
-      background: #ffffff;
-      border: 1px solid var(--border-soft);
-      border-radius: var(--radius-lg);
-      padding: 20px;
-      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
-    }
-
-    .feature-icon {
-      font-size: 28px;
-      margin-bottom: 12px;
-    }
-
-    .feature-card h4 {
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: #111827;
-    }
-
-    .feature-card p {
-      font-size: 12px;
-      color: var(--text-sub);
-      line-height: 1.6;
-    }
-
-    .comparison-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-      background: #ffffff;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
-    }
-
-    .comparison-table th {
-      background: linear-gradient(135deg, #2563eb, #1d4ed8);
-      color: #ffffff;
-      padding: 16px;
-      text-align: left;
-      font-weight: 600;
-      font-size: 13px;
-    }
-
-    .comparison-table td {
-      padding: 16px;
-      border-bottom: 1px solid var(--border-soft);
-      font-size: 13px;
-    }
-
-    .comparison-table tr:last-child td {
-      border-bottom: none;
-    }
-
-    .comparison-table tr:nth-child(even) {
-      background: #f9fafb;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-size: 11px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .badge.alt {
-      background: rgba(249, 115, 22, 0.1);
-      color: var(--accent-alt);
-    }
-
-    .phases-container {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      margin-top: 24px;
-    }
-
-    .phase {
-      background: #ffffff;
-      border: 2px solid var(--border-soft);
-      border-radius: var(--radius-lg);
-      padding: 16px;
-      position: relative;
-    }
-
-    .phase.highlight {
-      border-color: var(--accent);
-      background: var(--accent-soft);
-    }
-
-    .phase-number {
-      display: inline-block;
-      background: var(--accent);
-      color: #ffffff;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 14px;
-      margin-bottom: 8px;
-    }
-
-    .phase.highlight .phase-number {
-      background: var(--accent-alt);
-    }
-
-    .phase-title {
-      font-size: 13px;
-      font-weight: 700;
-      color: #111827;
-      margin-bottom: 8px;
-    }
-
-    .phase-duration {
-      font-size: 11px;
-      color: var(--text-sub);
-      margin-bottom: 10px;
-    }
-
-    .phase-list {
-      list-style: none;
-      padding: 0;
-      font-size: 12px;
-      color: var(--text-sub);
-    }
-
-    .phase-list li {
-      display: flex;
-      gap: 6px;
-      margin-bottom: 4px;
-      line-height: 1.4;
-    }
-
-    .phase-list li::before {
-      content: "✓";
-      color: var(--accent);
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    .principle-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      margin-top: 24px;
-    }
-
-    .principle-card {
-      background: #ffffff;
-      border: 1px solid var(--border-soft);
-      border-radius: var(--radius-lg);
-      padding: 24px;
-      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
-    }
-
-    .principle-card h4 {
-      font-size: 16px;
-      font-weight: 700;
-      color: #111827;
-      margin-bottom: 12px;
-    }
-
-    .principle-card p {
-      font-size: 13px;
-      color: var(--text-sub);
-      line-height: 1.8;
-      margin-bottom: 12px;
-    }
-
-    .principle-card ul {
-      list-style: none;
-      padding: 0;
-      font-size: 12px;
-      color: var(--text-sub);
-    }
-
-    .principle-card ul li {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 8px;
-      line-height: 1.5;
-    }
-
-    .principle-card ul li::before {
-      content: "→";
-      color: var(--accent-alt);
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 20px;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      font-size: 13px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      white-space: nowrap;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #2563eb, #1d4ed8);
-      color: #ffffff;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.3);
-    }
-
-    .btn-secondary {
-      background: #ffffff;
-      color: var(--accent);
-      border: 2px solid var(--accent);
-    }
-
-    .btn-secondary:hover {
-      background: var(--accent-soft);
-    }
-
-    .btn-accent {
-      background: linear-gradient(135deg, #f97316, #ea580c);
-      color: #ffffff;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .btn-accent:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 24px rgba(249, 115, 22, 0.3);
-    }
-
-    .cta-row {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 24px;
-    }
-
-    .section-light {
-      background: #ffffff;
-    }
-
-    .section-soft {
-      background: rgba(37, 99, 235, 0.02);
-    }
-
-    @media (max-width: 900px) {
-      .grid-2col {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-
-      .features-grid,
-      .principle-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .phases-container {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .section-title {
-        font-size: 24px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .section {
-        padding: 32px 16px;
-      }
-
-      .phases-container {
-        grid-template-columns: 1fr;
-      }
-
-      .cta-row {
-        flex-direction: column;
-      }
-
-      .btn {
-        justify-content: center;
-        width: 100%;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
+  <header class="gnb">
+    <div class="gnb-inner">
+      <a class="gnb-logo" href="index.html">533 창업설계</a>
+      <nav class="gnb-nav">
+        <a href="index.html">홈</a>
+        <a href="cases.html">코칭 사례</a>
+        <a href="pricing.html">비용 & 조건</a>
+        <a href="index.html#guide">사전 안내서</a>
+        <a class="gnb-cta" href="apply.html">신청하기</a>
+      </nav>
+    </div>
+  </header>
+  <section class="section section-dark-hook">
+    <div class="section-inner" style="text-align: center;">
+      <div class="hook-badge"><i class="ri-alert-line"></i> 창업가 필독</div>
+      <h2 class="hook-title">
+        "앱 개발부터 하셨나요?<br />
+        <span class="highlight-red">그렇다면 90% 확률로 실패합니다."</span>
+      </h2>
+      <p class="hook-desc">
+        많은 창업자들이 <strong>아이디어의 완성도</strong>에만 집중합니다.<br />
+        하지만 진짜 필요한 건, 개발 전에 <strong>'고객이 돈을 낼 준비가 되었는지'</strong> 확인하는 것입니다.<br /><br />
+        533 설계론은 이 순서를 뒤집습니다.<br />
+        <span class="highlight-yellow">수익모델 → 고객확보 → 재구매율 → 자동화</span><br />
+        이것이 검증되기 전까진, 개발하지 마십시오.
+      </p>
+    </div>
+  </section>
+
   <!-- HERO SECTION -->
   <section class="section section-light">
     <div class="section-inner">
@@ -464,7 +51,7 @@
 
       <div class="grid-2col">
         <div class="text-block">
-          <h3>🎯 왜 대부분의 스타트업은 실패하는가?</h3>
+          <h3><i class="ri-focus-3-line"></i> 왜 대부분의 스타트업은 실패하는가?</h3>
           <p>
             많은 창업자들이 <strong>아이디어의 완성도</strong>에만 집중합니다.
             하지만 실제로 필요한 것은 고객이 돈을 낼 준비가 되어 있는지,
@@ -485,8 +72,9 @@
 
         <div class="image-block">
           <div class="image-placeholder">
-            📊 Death Valley 그래프<br />
-            (대부분의 스타트업은 여기서 망합니다)
+            <i class="ri-bar-chart-line"></i>
+            <span>Death Valley 그래프<br />
+            (대부분의 스타트업은 여기서 망합니다)</span>
           </div>
         </div>
       </div>
@@ -496,7 +84,7 @@
   <!-- 핵심 원리 섹션 -->
   <section class="section section-soft">
     <div class="section-inner">
-      <h2 class="section-title">🔑 533 설계론의 핵심 원리</h2>
+      <h2 class="section-title"><i class="ri-key-line"></i> 533 설계론의 핵심 원리</h2>
       <p class="section-subtitle">
         "수익모델 → 검증 → 개발 → (운영) → 성장" 순서로 회사를 설계합니다
       </p>
@@ -504,8 +92,9 @@
       <div class="grid-2col reverse">
         <div class="image-block">
           <div class="image-placeholder">
-            📈 고통지수 10점 피라미드<br />
-            (고객 선택 기준)
+            <i class="ri-line-chart-line"></i>
+            <span>고통지수 10점 피라미드<br />
+            (고객 선택 기준)</span>
           </div>
         </div>
 
@@ -523,17 +112,17 @@
 
           <div class="features-grid">
             <div class="feature-card">
-              <div class="feature-icon">🎯</div>
+              <div class="feature-icon"><i class="ri-focus-3-line"></i></div>
               <h4>타겟 명확</h4>
               <p>문제를 가진 특정 고객층을 정의</p>
             </div>
             <div class="feature-card">
-              <div class="feature-icon">💰</div>
+              <div class="feature-icon"><i class="ri-money-dollar-circle-line"></i></div>
               <h4>객단가</h4>
               <p>월 25만원대의 표준 요금</p>
             </div>
             <div class="feature-card">
-              <div class="feature-icon">🔄</div>
+              <div class="feature-icon"><i class="ri-refresh-line"></i></div>
               <h4>재구매</h4>
               <p>80% 이상의 재구매율 목표</p>
             </div>
@@ -546,7 +135,7 @@
   <!-- 커리큘럼 섹션 -->
   <section class="section section-light">
     <div class="section-inner">
-      <h2 class="section-title">📚 533 커리큘럼: 5개 모듈, 33개 항목, 192개 요소</h2>
+      <h2 class="section-title"><i class="ri-book-read-line"></i> 533 커리큘럼: 5개 모듈, 33개 항목, 192개 요소</h2>
       <p class="section-subtitle">
         7년, 2만 시간 이상 현장에서 다듬은 창업 설계 시스템입니다.
         비즈니스 스킬 · 자동화 시스템 · CEO 자질, 세 축으로
@@ -620,7 +209,7 @@
   <!-- 18개월 로드맵 섹션 -->
   <section class="section section-soft">
     <div class="section-inner">
-      <h2 class="section-title">🗺️ 18개월 안에 100억까지 가는 단계별 로드맵</h2>
+      <h2 class="section-title"><i class="ri-map-2-line"></i> 18개월 안에 100억까지 가는 단계별 로드맵</h2>
       <p class="section-subtitle">
         각 단계는 숫자로 판단합니다. "다음 단계로 넘어가도 되는가?"를 정확히
         측정할 수 있어야 합니다.
@@ -686,7 +275,7 @@
   <!-- 실전 사례 섹션 (티저) -->
   <section class="section section-light">
     <div class="section-inner">
-      <h2 class="section-title">💡 실제 사례: 어떻게 적용되는가?</h2>
+      <h2 class="section-title"><i class="ri-lightbulb-flash-line"></i> 실제 사례: 어떻게 적용되는가?</h2>
       <p class="section-subtitle">
         "앱 없어도 됩니다" 주의 vs "매뉴얼이 곧 시스템" 실천
         <br />
@@ -712,8 +301,9 @@
 
         <div class="image-block">
           <div class="image-placeholder">
-            📋 아베방 가자 운영 매뉴얼<br />
-            (체계화된 엑셀 기반 관리)
+            <i class="ri-file-list-3-line"></i>
+            <span>아베방 가자 운영 매뉴얼<br />
+            (체계화된 엑셀 기반 관리)</span>
           </div>
         </div>
       </div>
@@ -737,8 +327,9 @@
 
         <div class="image-block">
           <div class="image-placeholder">
-            📚 교육 프로세스 매뉴얼<br />
-            (표준화된 강의 흐름)
+            <i class="ri-book-read-line"></i>
+            <span>교육 프로세스 매뉴얼<br />
+            (표준화된 강의 흐름)</span>
           </div>
         </div>
       </div>
@@ -748,7 +339,7 @@
   <!-- 시스템 전환 섹션 -->
   <section class="section section-soft">
     <div class="section-inner">
-      <h2 class="section-title">🔄 장사에서 사업으로의 시스템 전환</h2>
+      <h2 class="section-title"><i class="ri-refresh-line"></i> 장사에서 사업으로의 시스템 전환</h2>
       <p class="section-subtitle">
         창업 초기의 "장사" 방식에서 "사업·플랫폼" 운영으로 전환하는 과정
       </p>
@@ -756,8 +347,9 @@
       <div class="grid-2col">
         <div class="image-block">
           <div class="image-placeholder">
-            🔄 System Transition 다이어그램<br />
-            (사람 중심 → 시스템 중심)
+            <i class="ri-refresh-line"></i>
+            <span>System Transition 다이어그램<br />
+            (사람 중심 → 시스템 중심)</span>
           </div>
         </div>
 
@@ -832,7 +424,7 @@
   <!-- 1:1 코칭 섹션 -->
   <section class="section section-light" id="coaching">
     <div class="section-inner">
-      <h2 class="section-title">🎓 1:1 공동창업형 코칭</h2>
+      <h2 class="section-title"><i class="ri-graduation-cap-line"></i> 1:1 공동창업형 코칭</h2>
       <p class="section-subtitle">
         단순한 "조언자"가 아니라, CTO·CEO·CFO 역할을 함께 수행하는 공동창업자형
         코칭입니다.
@@ -840,7 +432,7 @@
 
       <div class="principle-grid">
         <div class="principle-card">
-          <h4>📋 코칭 구조</h4>
+          <h4><i class="ri-file-list-3-line"></i> 코칭 구조</h4>
           <ul>
             <li><strong>형태:</strong> 100% 1:1 맞춤 코칭</li>
             <li><strong>코치:</strong> 대표가 직접 코칭</li>
@@ -855,7 +447,7 @@
         </div>
 
         <div class="principle-card">
-          <h4>💰 성과 정산 구조</h4>
+          <h4><i class="ri-money-dollar-circle-line"></i> 성과 정산 구조</h4>
           <ul>
             <li><strong>예비창업자:</strong> 월 50만 원</li>
             <li><strong>기창업자:</strong> 월 300만 원</li>
@@ -868,7 +460,7 @@
         </div>
 
         <div class="principle-card">
-          <h4>🧠 멘탈 · 라이프 통합 코칭</h4>
+          <h4><i class="ri-brain-line"></i> 멘탈 · 라이프 통합 코칭</h4>
           <ul>
             <li>비즈니스 설계뿐 아니라, 대표의 멘탈/에너지 관리 포함</li>
             <li>창업 스트레스, 번아웃, 의사결정 피로도까지 함께 관리</li>
@@ -892,7 +484,7 @@
   <!-- 차별점 섹션 -->
   <section class="section section-soft" id="differentiation">
     <div class="section-inner">
-      <h2 class="section-title">🌟 왜 533 1:1 코칭이 다른가?</h2>
+      <h2 class="section-title"><i class="ri-star-line"></i> 왜 533 1:1 코칭이 다른가?</h2>
       <p class="section-subtitle">
         일반적인 창업 교육/그룹 코칭과 비교했을 때, 구조 자체가 다릅니다.
       </p>
@@ -956,14 +548,14 @@
   <!-- 추천 대상 섹션 -->
   <section class="section section-light" id="guide">
     <div class="section-inner">
-      <h2 class="section-title">👥 추천 대상</h2>
+      <h2 class="section-title"><i class="ri-team-line"></i> 추천 대상</h2>
       <p class="section-subtitle">
         이런 창업가라면 533 설계론이 큰 도움이 될 것입니다.
       </p>
 
       <div class="features-grid">
         <div class="feature-card">
-          <div class="feature-icon">🚀</div>
+          <div class="feature-icon"><i class="ri-rocket-2-line"></i></div>
           <h4>성장형 사업 준비 중</h4>
           <p>
             IT 플랫폼, 교육, 커뮤니티, 서비스 등 스케일이 가능한 사업을
@@ -972,7 +564,7 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon">🤔</div>
+          <div class="feature-icon"><i class="ri-question-line"></i></div>
           <h4>감으로 하는 창업 탈출</h4>
           <p>
             지금까지 감에만 의존했던 창업 방식에서 벗어나 "설계 기반"으로
@@ -981,7 +573,7 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon">💪</div>
+          <div class="feature-icon"><i class="ri-award-line"></i></div>
           <h4>초기 자금 최소화</h4>
           <p>
             투자자나 정부지원에 의존하지 않고, 고객의 선매출로 살아남는
@@ -990,7 +582,7 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon">📊</div>
+          <div class="feature-icon"><i class="ri-bar-chart-line"></i></div>
           <h4>재구매 구조 설계</h4>
           <p>
             한 번의 구매가 아니라 지속적인 재구매가 가능한 수익모델을
@@ -999,7 +591,7 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon">🔄</div>
+          <div class="feature-icon"><i class="ri-refresh-line"></i></div>
           <h4>자동화 시스템 구축</h4>
           <p>
             성장하면서도 인원을 무한정 늘리지 않고 시스템화하여 운영하고
@@ -1008,7 +600,7 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon">⚡</div>
+          <div class="feature-icon"><i class="ri-flashlight-line"></i></div>
           <h4>빠른 검증과 피드백</h4>
           <p>
             1년 이상 개발하는 대신, 수개월 내에 고객 반응을 받고 빠르게
@@ -1032,16 +624,16 @@
 
         <div class="cta-row" style="justify-content: center;">
           <a href="apply.html" class="btn btn-accent">
-            🎓 1:1 무료 코칭 신청하기
+            <i class="ri-graduation-cap-line"></i> 1:1 무료 코칭 신청하기
           </a>
           <a href="cases.html" class="btn btn-primary">
-            📂 실제 코칭 사례 보기
+            <i class="ri-folder-open-line"></i> 실제 코칭 사례 보기
           </a>
           <a href="pricing.html" class="btn btn-secondary">
-            💰 코칭 비용 & 조건 보기
+            <i class="ri-money-dollar-circle-line"></i> 코칭 비용 & 조건 보기
           </a>
           <a href="#guide" class="btn btn-secondary">
-            📖 사전 안내서 보기
+            <i class="ri-book-open-line"></i> 사전 안내서 보기
           </a>
         </div>
 
@@ -1054,15 +646,8 @@
   </section>
 
   <!-- Footer -->
-  <footer
-    style="
-      background: linear-gradient(135deg, #2563eb, #1d4ed8);
-      color: #ffffff;
-      padding: 32px 20px;
-      text-align: center;
-    "
-  >
-    <div style="max-width: 1120px; margin: 0 auto;">
+  <footer class="site-footer">
+    <div class="site-footer-inner">
       <p style="font-size: 13px; margin-bottom: 8px;">
         <strong>533 창업설계</strong> - 고객이 먼저 돈을 내는 시스템으로 만드는
         100억 가치 스타트업
@@ -1072,5 +657,36 @@
       </p>
     </div>
   </footer>
+  <div class="sticky-bottom-cta">
+    <div class="sticky-inner">
+      <div class="sticky-text">
+        <span class="badge-mini">마감 임박</span>
+        <span class="text-main">혼자 고민하면 늦습니다. <strong>1:1 설계</strong>로 시작하세요.</span>
+      </div>
+      <a href="apply.html" class="btn btn-accent btn-sm">
+        <i class="ri-rocket-2-line"></i> 무료 코칭 신청하기
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const revealTargets = document.querySelectorAll('.section');
+    revealTargets.forEach((target) => target.classList.add('reveal'));
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    revealTargets.forEach((target) => observer.observe(target));
+  </script>
+
 </body>
 </html>
