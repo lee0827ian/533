@@ -5,6 +5,7 @@
   <title>533 1:1 무료 코칭 신청</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
   <header class="gnb">
@@ -23,165 +24,47 @@
     <div class="section-inner section-inner-narrow">
       <h1 class="section-title">🎓 533 스타트업 1:1 무료 코칭 신청</h1>
       <p class="section-subtitle">
-        본 코칭은 <strong>IT 플랫폼 기반 스타트업, 100억 가치 목표</strong>를 전제로 합니다.<br />
         “교육”이 아니라 “설계”를 원하는 분만 신청해주세요.
       </p>
 
       <div class="highlight-box">
-        <p style="font-size: 13px; margin-bottom: 4px;">
-          · 정부지원 컨설팅 목적이 아닌, <strong>실제 회사를 함께 설계</strong>하는 1:1 코칭입니다.<br />
-          · 초기 자금 투자/마이너스 없이, 18개월 내 100억 가치 스타트업을 목표로 합니다.<br />
+        <p style="font-size: 16px;">
           · 한 달 10팀 내외만 선발하며, <strong>대표가 직접 코칭</strong>합니다.
         </p>
       </div>
 
-      <!-- action / method는 실제 개발 환경에서 설정 -->
       <form>
-        <!-- Q1 -->
         <div class="principle-card">
           <h4>1. J커브·Death Valley가 아닌, L자형 그래프로 생존하는 스타트업을 만들 준비가 되셨나요?</h4>
-          <p>
-            “빠른 성장 뒤 급락”이 아니라, <strong>꾸준히 꺾이지 않는 성장</strong>을 전제로 합니다.
-          </p>
-          <label style="display:block; margin-bottom:4px;">
-            <input type="radio" name="q1_ready" value="yes" required /> 네
-          </label>
-          <label style="display:block;">
-            <input type="radio" name="q1_ready" value="no" /> 아직 잘 모르겠습니다
-          </label>
+          <label style="display:block; margin-bottom:4px;"><input type="radio" name="q1" value="yes"> 네</label>
+          <label style="display:block;"><input type="radio" name="q1" value="no"> 아니오</label>
         </div>
-
-        <!-- Q2 현재 상황 -->
-        <div class="principle-card">
-          <h4>2. 현재 상황 *</h4>
-          <label style="display:block; margin-bottom:4px;">
-            <input type="radio" name="q2_status" value="pre_team" required /> 예비창업자 - 팀
-          </label>
-          <label style="display:block; margin-bottom:4px;">
-            <input type="radio" name="q2_status" value="pre_solo" /> 예비창업자 - 개인
-          </label>
-          <label style="display:block; margin-bottom:4px;">
-            <input type="radio" name="q2_status" value="post_team" /> 기창업자 - 팀
-          </label>
-          <label style="display:block; margin-bottom:4px;">
-            <input type="radio" name="q2_status" value="post_solo" /> 기창업자 - 개인
-          </label>
-          <label style="display:block; margin-top:8px;">
-            기타:
-            <input type="text" name="q2_status_other"
-              style="width:100%; padding:6px 8px; margin-top:4px; font-size:13px;" />
-          </label>
-        </div>
-
-        <!-- Q3 자금 상황 -->
-        <div class="principle-card">
-          <h4>3. 자금 상황 *</h4>
-          <label style="display:block; margin-bottom:4px;">
-            <input type="radio" name="q3_fund" value="income" required /> 현재 수입이 고정적으로 있음
-          </label>
-          <label style="display:block; margin-bottom:4px;">
-            <input type="radio" name="q3_fund" value="gov" /> 자금을 위한 정부 지원 사업 필요
-          </label>
-          <label style="display:block; margin-top:8px;">
-            기타:
-            <input type="text" name="q3_fund_other"
-              style="width:100%; padding:6px 8px; margin-top:4px; font-size:13px;" />
-          </label>
-        </div>
-
-        <!-- Q4 시간 투입 -->
-        <div class="principle-card">
-          <h4>4. 하루 3시간, 주 20시간 이내로 18개월간 집중 투입이 가능하신가요?</h4>
-          <p>
-            100억 가치 스타트업 창업을 위한 <strong>시스템 설계</strong>에 필요한 최소 투입 시간입니다.
-          </p>
-          <label style="display:block; margin-bottom:4px;">
-            <input type="radio" name="q4_time" value="yes" required /> 네, 가능합니다.
-          </label>
-          <label style="display:block;">
-            <input type="radio" name="q4_time" value="no" /> 현실적으로 어렵습니다.
-          </label>
-        </div>
-
-        <!-- Q5 오너핏/데이터 -->
-        <div class="principle-card">
-          <h4>5. 고통지수 10을 느끼는 오너핏 고객과 시장 데이터를 보유하고 있습니까?</h4>
-          <p>
-            (주관적 감각이 아니라, <strong>수치·데이터 기준</strong>의 고객/시장 정보)
-          </p>
-          <label style="display:block; margin-bottom:4px;">
-            <input type="radio" name="q5_ownerfit" value="yes" required /> 네
-          </label>
-          <label style="display:block; margin-bottom:4px;">
-            <input type="radio" name="q5_ownerfit" value="no" /> 아니오
-          </label>
-          <label style="display:block; margin-top:8px;">
-            기타 설명:
-            <textarea name="q5_ownerfit_desc" rows="3"
-              style="width:100%; padding:6px 8px; margin-top:4px; font-size:13px;"></textarea>
-          </label>
-        </div>
-
-        <!-- Q6 코칭비/지분 동의 -->
-        <div class="principle-card">
-          <h4>6. 코칭 구독료 및 지분 구조에 동의하시나요?</h4>
-          <p>
-            · 주 2회, 월 8회 1:1 코칭<br />
-            · 예비창업자: 월 50만 원 / 기창업자: 월 300만 원<br />
-            · 스타트업 가치 100억 원 이상 달성 시 5% 지분 양도 (미달성시 지분 양도 없음)
-          </p>
-          <label style="display:block; margin-bottom:4px;">
-            <input type="radio" name="q6_agree" value="yes" required /> 네, 동의합니다.
-          </label>
-          <label style="display:block; margin-bottom:4px;">
-            <input type="radio" name="q6_agree" value="no" /> 아니오, 더 논의가 필요합니다.
-          </label>
-          <label style="display:block; margin-top:8px;">
-            추가로 남기고 싶은 의견:
-            <textarea name="q6_comment" rows="3"
-              style="width:100%; padding:6px 8px; margin-top:4px; font-size:13px;"></textarea>
-          </label>
-        </div>
-
-        <!-- Q7 창업 동기 -->
-        <div class="principle-card">
-          <h4>7. 창업을 하려는 이유와 얻고 싶은 결과는 무엇인가요? *</h4>
-          <textarea name="q7_reason" rows="4" required
-            style="width:100%; padding:8px 10px; font-size:13px;"
-            placeholder="왜 창업을 하시려는지, 어떤 삶/결과를 얻고 싶으신지 구체적으로 적어주세요."></textarea>
-        </div>
-
-        <!-- Q8 연락처 -->
-        <div class="principle-card">
-          <h4>8. 이름 / 연락처 / 이메일 / 신청 경로 *</h4>
-          <textarea name="q8_contact" rows="3" required
-            style="width:100%; padding:8px 10px; font-size:13px;"
-            placeholder="예) 홍길동 / 010-0000-0000 / hello@example.com / 블로그 글 보고 신청"></textarea>
-        </div>
-
-        <!-- 제출 버튼 -->
-        <div style="text-align: center; margin-top: 8px;">
+        
+        <div style="text-align: center; margin-top: 24px;">
           <button type="submit" class="btn btn-accent">
-            🎓 1:1 무료 코칭 신청서 제출
+            <i class="ri-send-plane-fill"></i> 1:1 무료 코칭 신청서 제출
           </button>
-          <p style="font-size: 11px; color: #6b7280; margin-top: 8px;">
-            * 실제 접수 방식(이메일/백엔드 연동 등)은 개발 환경에 맞게
-            <code>&lt;form&gt;</code>의 action과 method를 설정해주세요.
-          </p>
         </div>
       </form>
     </div>
   </section>
+
   <footer class="site-footer">
     <div class="site-footer-inner">
-      <p style="font-size: 13px; margin-bottom: 8px;">
-        <strong>533 창업설계</strong> - 고객이 먼저 돈을 내는 시스템으로 만드는
-        100억 가치 스타트업
-      </p>
-      <p style="font-size: 11px; color: rgba(255, 255, 255, 0.8);">
-        © 2026 533 Startup Coaching. All rights reserved.
-      </p>
+      <p style="font-size: 13px;">© 2026 533 Startup Coaching.</p>
     </div>
   </footer>
+
+  <div class="sticky-bottom-cta">
+    <div class="sticky-inner">
+      <div class="sticky-text">
+        <span class="badge-mini">마감 임박</span>
+        <span class="text-main">혼자 고민하면 늦습니다. <strong>1:1 설계</strong>로 시작하세요.</span>
+      </div>
+      <a href="apply.html" class="btn btn-accent btn-sm">
+        <i class="ri-rocket-2-line"></i> 무료 코칭 신청하기
+      </a>
+    </div>
+  </div>
 </body>
 </html>
