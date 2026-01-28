@@ -5,175 +5,21 @@
   <title>533 코칭 사례</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- index.html의 CSS와 동일 -->
-  <style>
-    :root {
-      --bg: #f4f7fb;
-      --bg-soft: #ffffff;
-      --accent: #2563eb;
-      --accent-soft: rgba(37, 99, 235, 0.08);
-      --accent-alt: #f97316;
-      --text-main: #0f172a;
-      --text-sub: #6b7280;
-      --border-soft: #d4d7e5;
-      --radius-xl: 18px;
-      --radius-lg: 14px;
-      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.12);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Noto Sans KR",
-        system-ui, sans-serif;
-      background: linear-gradient(180deg, #f4f7fb 0%, #ffffff 100%);
-      color: var(--text-main);
-      line-height: 1.6;
-    }
-
-    .section {
-      padding: 48px 20px;
-    }
-
-    .section-inner {
-      width: 100%;
-      max-width: 1120px;
-      margin: 0 auto;
-    }
-
-    .section-title {
-      font-size: 28px;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      margin-bottom: 12px;
-      color: #020617;
-    }
-
-    .section-subtitle {
-      font-size: 14px;
-      color: var(--text-sub);
-      margin-bottom: 32px;
-      line-height: 1.7;
-    }
-
-    .grid-2col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-      align-items: center;
-      margin-bottom: 32px;
-    }
-
-    .grid-2col.reverse {
-      direction: rtl;
-    }
-
-    .grid-2col.reverse > * {
-      direction: ltr;
-    }
-
-    .image-block {
-      border-radius: var(--radius-xl);
-      background: #ffffff;
-      border: 1px solid var(--border-soft);
-      padding: 16px;
-      box-shadow: var(--shadow-soft);
-      overflow: hidden;
-    }
-
-    .image-placeholder {
-      width: 100%;
-      aspect-ratio: 4/3;
-      background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent);
-      font-size: 14px;
-      font-weight: 600;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .text-block h3 {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 12px;
-      color: #111827;
-    }
-
-    .text-block p {
-      font-size: 14px;
-      color: var(--text-sub);
-      margin-bottom: 12px;
-      line-height: 1.8;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(249, 115, 22, 0.1);
-      color: var(--accent-alt);
-      font-size: 11px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 20px;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      font-size: 13px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      white-space: nowrap;
-    }
-
-    .btn-accent {
-      background: linear-gradient(135deg, #f97316, #ea580c);
-      color: #ffffff;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
-    }
-
-    .btn-accent:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 24px rgba(249, 115, 22, 0.3);
-    }
-
-    @media (max-width: 900px) {
-      .grid-2col {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-
-      .section-title {
-        font-size: 24px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .section {
-        padding: 32px 16px;
-      }
-
-      .btn {
-        justify-content: center;
-        width: 100%;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="gnb">
+    <div class="gnb-inner">
+      <a class="gnb-logo" href="index.html">533 창업설계</a>
+      <nav class="gnb-nav">
+        <a href="index.html">홈</a>
+        <a href="cases.html">코칭 사례</a>
+        <a href="pricing.html">비용 & 조건</a>
+        <a href="index.html#guide">사전 안내서</a>
+        <a class="gnb-cta" href="apply.html">신청하기</a>
+      </nav>
+    </div>
+  </header>
   <section class="section section-light">
     <div class="section-inner">
       <h1 class="section-title">📂 533 1:1 코칭 사례 모음</h1>
